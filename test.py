@@ -20,9 +20,14 @@ for i in range(len(l)):
 	if l1[0] == '.':
 		continue
 	names = glob.glob(dir_path + '/' + dataset + '/' + l1 + '/*.jpg')
-	haralick += feature_extraction.haralick_features(names)
-	VGG += feature_extraction.VGG(names)
-	inception += feature_extraction.inception(names)
+	if cnt == 0:
+		haralick = feature_extraction.haralick_features(names)
+		VGG = feature_extraction.VGG(names)
+		inception = feature_extraction.inception(names)
+	else:
+		haralick = np.vstack((haralick, feature_extraction.haralick_features(names)))
+		VGG = np.vstack((VGG, feature_extraction.VGG(names)))
+		inception = np.vstack((inception, feature_extraction.inception(names)))
 	Y += [cnt] * len(names)
 	cnt += 1
 Y = np.asarray(Y)
