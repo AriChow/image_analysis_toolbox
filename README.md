@@ -1,4 +1,4 @@
-### Image analysis toolbox
+# Image analysis toolbox
 Toolbox for image analysis pipeline (image pre-processing, feature extraction, feature preprocessing, dimensionality reduction, classification, clustering and regression). It is powered by sklearn and other python libraries.
 
 ## Modules
