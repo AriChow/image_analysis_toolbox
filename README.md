@@ -17,7 +17,10 @@ All the modules exist in the directory *utils*
 An example for the modules is provided in *test.py* where the modules are used as APIs.
 It consists of usage of all the existing modules. The dataset used is 
 *mats_dataset1* which is a material science dataset consisting of images of dendrites and non-dendritic microstructures.  
-Use the code in *test.py* for your purpose. All you need is the *utils* for performing your image analysis on your chosen dataset.
+Use the code in *test.py* for your purpose. All you need is the *utils* for performing your image analysis on your chosen dataset.  
+Please make sure to install the necessary python modules (keras, mahotas, etc.). 
+This code is written using python 2.7 distribution of Anaconda.
+
 
 
  
